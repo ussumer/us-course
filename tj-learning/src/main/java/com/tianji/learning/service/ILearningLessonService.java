@@ -5,6 +5,7 @@ import com.tianji.common.domain.dto.PageDTO;
 import com.tianji.common.domain.query.PageQuery;
 import com.tianji.learning.domain.po.LearningLesson;
 import com.tianji.learning.domain.vo.LearningLessonVO;
+import com.tianji.learning.domain.vo.LearningPlanPageVO;
 
 import java.util.List;
 
@@ -68,4 +69,26 @@ public interface ILearningLessonService extends IService<LearningLesson> {
      * @return 学习人数
      */
     Integer countLearningLessonByCourse(Long courseId);
+
+    /**
+     * 查询当前用户课表中指定课程的记录（day03：学习记录服务跨Service调用）
+     * @param userId 学员id
+     * @param courseId 课程id
+     * @return 课表记录，不存在返回null
+     */
+    LearningLesson queryByUserAndCourseId(Long userId, Long courseId);
+
+    /**
+     * 创建学习计划（day03：本质是更新课表的 week_freq 和 plan_status）
+     * @param courseId 课程id
+     * @param freq 每周学习频率
+     */
+    void createLearningPlan(Long courseId, Integer freq);
+
+    /**
+     * 查询我的学习计划进度（day03：本周计划统计 + 分页的课程进度）
+     * @param query 分页参数
+     * @return 统计结果与课程进度列表
+     */
+    LearningPlanPageVO queryMyPlans(PageQuery query);
 }

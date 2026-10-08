@@ -15,3 +15,32 @@ target
 .project
 logs
 job
+
+# Local credentials and generated deployment configuration
+.env
+.env.*
+!.env.example
+deploy/.env
+deploy/runtime/
+**/application-local.yml
+**/application-local.yaml
+**/bootstrap-local.yml
+**/bootstrap-local.yaml
+**/bootstrap.yml
+**/bootstrap.yaml
+
+# Cloud/provider credentials and private keys. Keep sanitized templates in Git.
+**/*.jks
+**/*.p12
+**/*.pfx
+**/*.pem
+**/*.key
+**/*secret*.yml
+**/*secret*.yaml
+**/*credentials*.yml
+**/*credentials*.yaml
+
+# Local benchmark output and temporary test identities
+bench/results/
+bench/*.tokens
+bench/tokens*.txt

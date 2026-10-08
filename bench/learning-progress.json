@@ -1,0 +1,8 @@
+{
+  "commitTime": "2026-10-07 10:20:00",
+  "duration": 280,
+  "lessonId": {lesson_id},
+  "moment": {moment},
+  "sectionId": {section_id},
+  "sectionType": 1
+}

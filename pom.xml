@@ -4,24 +4,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tianji</groupId>
-    <artifactId>tjxt</artifactId>
+    <groupId>com.us</groupId>
+    <artifactId>uscourse</artifactId>
     <version>1.0.0</version>
     <modules>
-        <module>tj-common</module>
-        <module>tj-auth</module>
-        <module>tj-api</module>
-        <module>tj-gateway</module>
-        <module>tj-user</module>
-        <module>tj-message</module>
-        <module>tj-media</module>
-        <module>tj-course</module>
-        <module>tj-search</module>
-        <module>tj-learning</module>
-        <module>tj-pay</module>
-        <module>tj-trade</module>
-        <module>tj-exam</module>
-        <module>tj-data</module>
+        <module>us-common</module>
+        <module>us-auth</module>
+        <module>us-api</module>
+        <module>us-gateway</module>
+        <module>us-user</module>
+        <module>us-message</module>
+        <module>us-media</module>
+        <module>us-course</module>
+        <module>us-search</module>
+        <module>us-learning</module>
+        <module>us-pay</module>
+        <module>us-trade</module>
+        <module>us-exam</module>
+        <module>us-data</module>
+        <module>us-remark</module>
+        <module>us-promotion</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -38,7 +40,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <tjxt.version>1.0</tjxt.version>
+        <uscourse.version>1.0</uscourse.version>
         <org.projectlombok.version>1.18.20</org.projectlombok.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>

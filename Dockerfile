@@ -1,11 +1,6 @@
-FROM openjdk:11.0-jre-buster
-LABEL maintainer="研究院研发组 <research-maint@itcast.cn>"
-ENV JAVA_OPTS=""
-# 设定时区
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
+FROM eclipse-temurin:11-jre-jammy
+LABEL org.opencontainers.image.title="US Course"
+ENV TZ=Asia/Shanghai JAVA_OPTS="-Xms128m -Xmx384m"
 WORKDIR /app
-ADD app.jar /app/app.jar
-
-ENTRYPOINT ["sh","-c","java  -jar $JAVA_OPTS /app/app.jar"]
+COPY app.jar /app/app.jar
+ENTRYPOINT ["sh", "-c", "exec java $JAVA_OPTS -jar /app/app.jar \"$@\"", "--"]
